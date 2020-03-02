@@ -1,0 +1,6 @@
+projectKey=digit-recognition-from-hyperskill
+serverUrl=https://sonarqube-server.com
+serverVersion=7.5.0.20543
+dashboardUrl=https://sonarqube-server.com/dashboard?id=digit-recognition-from-hyperskill
+ceTaskId=AXCa4M1Li_C6Ui417QBh
+ceTaskUrl=https://sonarqube-server.com/api/ce/task?id=AXCa4M1Li_C6Ui417QBh
