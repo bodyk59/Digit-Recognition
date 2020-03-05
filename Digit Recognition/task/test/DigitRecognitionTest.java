@@ -5,19 +5,10 @@ import recognition.Main;
 
 import java.util.List;
 
-
 class Clue {
     String answer;
-    String opposite;
-    String input;
     Clue(int ans) {
         answer = Integer.toString(ans);
-        if (ans == 1) {
-            opposite = "0";
-        }
-        else {
-            opposite = "1";
-        }
     }
 }
 
@@ -28,81 +19,207 @@ public class DigitRecognitionTest extends BaseStageTest<Clue> {
 
     @Override
     public List<TestCase<Clue>> generate() {
-        List<TestCase<Clue>> tests = List.of(
+        return List.of(
             new TestCase<Clue>()
                 .setAttach(new Clue(1))
                 .setInput(
                     "_X_\n" +
                     "_X_\n" +
-                    "XX_\n"),
+                    "XX_\n" +
+                    "XX_\n" +
+                    "_XX\n"),
 
             new TestCase<Clue>()
-                .setAttach(new Clue(0))
+                .setAttach(new Clue(2))
                 .setInput(
-                    "_XX\n" +
-                    "X_X\n" +
+                    "XX_\n" +
+                    "__X\n" +
+                    "__X\n" +
+                    "X__\n" +
                     "XXX\n"),
 
             new TestCase<Clue>()
-                .setAttach(new Clue(1))
+                .setAttach(new Clue(7))
                 .setInput(
-                    "_X_\n" +
-                    "_X_\n" +
-                    "X__\n"),
-
-            new TestCase<Clue>()
-                .setAttach(new Clue(0))
-                .setInput(
-                    "_X_\n" +
+                    "XXX\n" +
                     "X_X\n" +
-                    "_X_\n"),
+                    "__X\n" +
+                    "__X\n" +
+                    "__X\n"),
 
             new TestCase<Clue>()
-                .setAttach(new Clue(1))
+                .setAttach(new Clue(9))
                 .setInput(
-                    "_X_\n" +
-                    "_X_\n" +
-                    "_X_\n"),
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "_XX\n"),
 
             new TestCase<Clue>()
                 .setAttach(new Clue(0))
                 .setInput(
                     "XXX\n" +
                     "X_X\n" +
-                    "XXX\n"),
+                    "X_X\n" +
+                    "X_X\n" +
+                    "_XX\n"),
 
             new TestCase<Clue>()
-                .setAttach(new Clue(0))
+                .setAttach(new Clue(3))
                 .setInput(
-                    "_XX\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "_XX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(4))
+                .setInput(
+                    "X_X\n" +
+                    "__X\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "__X\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(5))
+                .setInput(
+                    "XXX\n" +
+                    "X__\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "XX_\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(8))
+                .setInput(
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n" +
                     "X_X\n" +
                     "XX_\n"),
 
             new TestCase<Clue>()
-                .setAttach(new Clue(1))
+                .setAttach(new Clue(6))
                 .setInput(
                     "_XX\n" +
+                    "X__\n" +
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n"),
+
+
+
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(0))
+                .setInput(
+                    "XXX\n" +
+                    "X_X\n" +
+                    "X_X\n" +
+                    "X_X\n" +
+                    "XXX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(1))
+                .setInput(
                     "_X_\n" +
-                    "_X_\n")
+                    "_X_\n" +
+                    "_X_\n" +
+                    "_X_\n" +
+                    "_X_\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(2))
+                .setInput(
+                    "XXX\n" +
+                    "__X\n" +
+                    "XXX\n" +
+                    "X__\n" +
+                    "XXX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(3))
+                .setInput(
+                    "XXX\n" +
+                    "__X\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "XXX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(4))
+                .setInput(
+                    "X_X\n" +
+                    "X_X\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "__X\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(5))
+                .setInput(
+                    "XXX\n" +
+                    "X__\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "XXX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(6))
+                .setInput(
+                    "XXX\n" +
+                    "X__\n" +
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(7))
+                .setInput(
+                    "XXX\n" +
+                    "__X\n" +
+                    "__X\n" +
+                    "__X\n" +
+                    "__X\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(8))
+                .setInput(
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n"),
+
+            new TestCase<Clue>()
+                .setAttach(new Clue(9))
+                .setInput(
+                    "XXX\n" +
+                    "X_X\n" +
+                    "XXX\n" +
+                    "__X\n" +
+                    "XXX\n")
+
             );
-
-        for (TestCase<Clue> test : tests) {
-            test.getAttach().input = test.getInput();
-        }
-
-        return tests;
     }
 
     @Override
     public CheckResult check(String reply, Clue clue) {
-        boolean result =
-            reply.contains(clue.answer)
-            && !reply.contains(clue.opposite);
-
-        String feedback = "The input is:\n"
-            + clue.input + "\nYour output is:\n"
-            + reply;
-
-        return new CheckResult(result, feedback);
+        boolean contains = reply.contains(clue.answer);
+        if (!contains) {
+            return CheckResult.FALSE;
+        }
+        for (int i = 0; i < 10; i++) {
+            String num = Integer.toString(i);
+            if (!num.equals(clue.answer) && reply.contains(num)) {
+                return new CheckResult(false,
+                    "Along with the right answer, " +
+                        "number " + i + " was found in the output");
+            }
+        }
+        return CheckResult.TRUE;
     }
 }
