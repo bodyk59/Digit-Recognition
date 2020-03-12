@@ -1,48 +1,70 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-//        StringBuilder stringBuilder = new StringBuilder();
-//        String temp = scanner.next();
-//
-//        while (!"end".equals(temp)) {
-//            stringBuilder.append(temp).append(" ");
-//            temp = scanner.next();
-//        }
-//
-//        System.out.println(stringBuilder);
 
-        int[][] inputMatrix = new int[3][3];
-        int[][] clone = new int[3][3];
+        String temp = "";
+        String finalString = "";
+        int dim = -1;
 
-        String temp = scanner.next();
+        while (!"end".equals(temp)) {
+            finalString = finalString + temp + " ";
+            temp = scanner.nextLine();
+            dim++;
+        }
 
-        for (int i = 0; i < inputMatrix.length; i++) {
-            for (int j = 0; j < inputMatrix[i].length; j ++) {
-                inputMatrix[i][j] = Integer.parseInt(temp);
-                clone[i][j] = Integer.parseInt(temp);
-                temp = scanner.next();
+        scanner.close();
+        scanner = new Scanner(finalString);
+        int count = 0;
+
+        while (scanner.hasNextInt()) {
+            scanner.nextInt();
+            count++;
+        }
+
+        scanner.close();
+        int column = count / dim;
+        int[][] inArray = new int[dim][column];
+        scanner = new Scanner(finalString);
+
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < column; j++) {
+                inArray[i][j] = scanner.nextInt();
             }
         }
 
-        for (int i = 0; i < clone.length; i++) {
-            for (int j = 0; j < clone[i].length; j ++) {
-                int firstElement = i - 1 < 0 ? clone[2][j] : clone[i - 1][j];
-                int secondElement = i + 1 > 2 ? clone[0][j] : clone[i + 1][j];
-                int thirdElement = j - 1 < 0 ? clone[i][2] : clone[i][j - 1];
-                int fourthElement = j + 1 > 2 ? clone[i][0] : clone[i][j + 1];
+        int[][] outArray = new int[dim][column];
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < column; j++) {
+                int left = j - 1;
+                int top = i - 1;
+                int right = j + 1;
+                int bot = i + 1;
+                if (i == 0) {
+                    top = dim - 1;
+                }
+                if (i == dim - 1) {
+                    bot = 0;
+                }
+                if (j == 0) {
+                    left = column - 1;
+                }
+                if (j == column - 1) {
+                    right = 0;
+                }
+                outArray[i][j] =
+                        inArray[i][left] + inArray[i][right] + inArray[top][j] + inArray[bot][j];
+            }
+        }
+        scanner.close();
 
-                inputMatrix[i][j] = firstElement + secondElement + thirdElement + fourthElement;
-
-                System.out.print(inputMatrix[i][j] + " ");
+        for (int i = 0; i < dim; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.print(outArray[i][j]);
+                System.out.print(" ");
             }
             System.out.println();
         }
     }
 }
-//inputMatrix[i].length - 1 / 2
-//inputMatrix[i].length - 2 / 0
-//inputMatrix[i].length - 1 /
-//inputMatrix[i].length - 2 / 2
