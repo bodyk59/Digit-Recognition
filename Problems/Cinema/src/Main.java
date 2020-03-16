@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * @author Bogdan Kurchak
+ */
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -7,32 +10,30 @@ class Main {
         int rows = scanner.nextInt();
         int seats = scanner.nextInt();
 
-        int[][] cinemaHall = new int[rows][seats];
+        String[] cinemaHall = new String[rows];
 
         for (int i = 0; i < cinemaHall.length; i++) {
-            for (int j = 0; j < cinemaHall[i].length; j++) {
-                cinemaHall[i][j] = scanner.nextInt();
+            cinemaHall[i] = scanner.next();
+
+            for (int j = 0; j < seats - 1; j++) {
+                cinemaHall[i] += scanner.next();
             }
         }
 
         int neighbourSeats = scanner.nextInt();
-        int count = 1;
-        int temp = 1;
+        String neededSeats = "";
+
+        for (int i = 0; i < neighbourSeats; i++) {
+            neededSeats += "0";
+        }
+
         int result = 0;
 
         for (int i = 0; i < cinemaHall.length; i++) {
-            int j = 0;
-            for ( ; j < cinemaHall[i].length; j++) {
-                if (cinemaHall[i][j] == 0 && temp == cinemaHall[i][j]) {
-                    count++;
-                }
-                temp = cinemaHall[i][j];
-            }
-            if (count >= neighbourSeats) {
+            if (cinemaHall[i].contains(neededSeats)) {
                 result = i + 1;
                 break;
             }
-            count = 1;
         }
 
         System.out.println(Math.max(0, result));
