@@ -1,0 +1,22 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    // The method is OK, no need to change it
+    public void writeWords(String[] words) throws IOException {
+        LetterPrinter printer = new LetterPrinter();
+
+        char[] letters = convert(words);
+        for (char letter : letters) {
+            printer.write(letter);
+        }
+    }
+
+    private char[] convert(String[] words) throws IOException {
+        // implement the method
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8846
+status: Solved
+record: -1
