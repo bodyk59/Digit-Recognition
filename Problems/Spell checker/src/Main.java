@@ -3,22 +3,25 @@ import java.util.*;
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numberOfKnownWords = scanner.nextInt();
 
-        Set<String> setOfKnownWords = new HashSet<>();
+        Set<String> dictionary = new LinkedHashSet<>();
 
-        for (int i = 0; i < numberOfKnownWords; i++) {
-            setOfKnownWords.add(scanner.next().toLowerCase());
+        int dictionarySize = scanner.nextInt();
+
+        for (int i = 0; i < dictionarySize; i++) {
+            dictionary.add(scanner.next().toLowerCase());
         }
 
-        int numberLineOfText = scanner.nextInt();
-        Set<String> setOfText = new HashSet<>();
+        int lineOfText = scanner.nextInt();
+        scanner.nextLine();
+        Set<String> text = new LinkedHashSet<>();
 
-        for (int i = 0; i < numberLineOfText; i++) {
-            String[] temp = scanner.nextLine().split("\\s+");
-            Collections.addAll(setOfText, temp);
+        for (int i = 0; i < lineOfText; i++) {
+            String[] line = scanner.nextLine().toLowerCase().split("\\s+");
+            text.addAll(Arrays.asList(line));
         }
 
-        System.out.println(setOfText);
+        dictionary.removeAll(text);
+        dictionary.forEach(word -> System.out.println(word));
     }
 }
