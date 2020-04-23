@@ -14,6 +14,8 @@ public class Main {
 }
 
 
+/*
 enum Secret {
     STAR, CRASH, START, // ...
 }
+*/
