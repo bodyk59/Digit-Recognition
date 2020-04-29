@@ -1,0 +1,19 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            // write your code here
+        }
+    }
+  learner_created: false
+- name: src/PasswordChecker.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/3788
+status: Solved
+record: -1
