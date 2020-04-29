@@ -1,0 +1,30 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.Scanner;
+
+    class ConcatenateStringsProblem {
+
+        public static String concatenateStringsWithoutDigits(String[] strings) {
+            // write your code with StringBuilder here
+        }
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            String[] strings = scanner.nextLine().split("\\s+");
+            String result = concatenateStringsWithoutDigits(strings);
+            System.out.println(result);
+        }
+    }
+  learner_created: false
+- name: src/CounterLetter.java
+  visible: true
+  learner_created: true
+- name: src/CounterNumber.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/3813
+status: Solved
+record: -1
