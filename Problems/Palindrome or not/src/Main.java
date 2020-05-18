@@ -1,0 +1,1 @@
+Collectors.partitioningBy(word -> word.equals(new StringBuilder(word).reverse().toString()))
