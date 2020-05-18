@@ -1,0 +1,22 @@
+<b>Counting clicks</b> <a class=right href="https://hyperskill.org/learn/step/2460">Open on JetBrains Academy</a>
+<br><br>
+<html>
+ <head></head>
+ <body>
+  <p>There is a <strong>LogEntry</strong> class for monitoring user activity on your site. The class has three fields:</p> 
+  <ul> 
+   <li><strong>created: Date </strong>- the date of creating log entry</li> 
+   <li><strong>login: String</strong> - a user login</li> 
+   <li><strong>url: String</strong> - a url that the user clicked</li> 
+  </ul> 
+  <p>The class have getters for all fields with the corresponding names (getCreated(), getLogin(), getUrl()).<br> <br> Write a collector that calculates how many times was each url clicked by users. The collector will be applied to a stream of log entries for creating a map: <strong>url</strong><strong> -&gt; click count</strong>.<br> <br> The class<strong> LogEntry </strong>will be available during testing. You can create your own classes for local testing.</p> 
+  <p><strong>Important.</strong> You should write only the collector in <strong>any valid formats but without ; on the end.</strong></p> 
+  <p>It will be passed as an argument to the <strong>collect()</strong> method of a stream as shown below.</p> 
+  <pre><code class="language-java">List&lt;LogEntry&gt; logs = ...
+Map&lt;String, Long&gt; clickCount = 
+        logs.stream()
+            .collect(...your_collector_will_be_passed_here...);</code></pre> 
+  <p><strong>Examples</strong> of the valid solution formats: <strong>Collectors.reducing(...)</strong> or <strong><strong>reducing(...).</strong></strong></p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+<a href="https://hyperskill.org/learn/step/3613">Show topic summary</a>

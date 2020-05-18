@@ -1,0 +1,1 @@
+Collectors.groupingBy(LogEntry::getUrl, Collectors.counting())
