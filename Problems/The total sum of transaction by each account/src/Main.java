@@ -1,0 +1,1 @@
+Collectors.groupingBy(account -> account.getAccount().getNumber(), Collectors.summingLong(Transaction::getSum))
