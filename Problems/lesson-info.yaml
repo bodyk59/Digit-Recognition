@@ -10,3 +10,131 @@ content:
 - Production of all numbers in the range
 - Creating a closure
 - Getting distinct strings
+- Ascending and descending sorting
+- Ascending and descending sorting
+- Apply function to all elements
+- Calculator
+- Returning from a method
+- Iterations
+- An anonymous class with a single method
+- An anonymous class with three methods
+- String reverser
+- A long process
+- Returning values from an anonymous class
+- Output names of the methods
+- Pastry packing optimization
+- Pastry packing optimization
+- Boxes are not just objects!
+- Writing a class
+- Concat all strings without digits
+- Vehicle registration number
+- Check IP address
+- Illegal identifiers
+- Check the clock time
+- Safe password
+- In the middle of a word
+- Find a word with a given length
+- Number parsing
+- Start or end of a word
+- Remove extra spaces
+- Remove HTML tags
+- Remove comments
+- Extracting big numbers from a text
+- Extracting words from a text
+- Find all passwords
+- List multiplicator
+- Packing backeries
+- Violator
+- Photocopiers
+- Return empty string when argument is null
+- Avoid NPE
+- Out of bounds!
+- Throw an IOException
+- The root of a number
+- Days of the week
+- Throw an unchecked exception
+- Throw a checked exception
+- Getting current thread info
+- Message notifier as a thread
+- Starting threads
+- String processor
+- Multiple threads
+- Writing a thread for printing numbers
+- Numbers filter
+- Starting runnables
+- Ordering the execution of threads
+- VeganPizza
+- Calculate the number of distinct characters
+- Summing with threads
+- Multithreaded counter
+- Countdown counter
+- Counting number of instances
+- Thread-safe account
+- Handling interruptions
+- Interrupting a thread
+- Finding and starting a thread
+- Messaging
+- Check whether a number is prime
+- How many tasks are finished
+- How many Callable objects are there?
+- Execute Callable objects
+- Getting information on a day
+- The first and the last day of a month
+- Find all mondays
+- 10 days before
+- 2 weeks after
+- 30 years before and after
+- Print dates of a year with an offset
+- Convert numbers to days
+- The first day of a month or not
+- The last day of a month
+- The n-th day from the end of a month
+- Seconds since start of a day
+- Return time without seconds
+- Seconds between two time points
+- Some hours and minutes ago
+- Add 11 hours and print the date
+- Add days and subtract hours
+- Merging date-time instances
+- Adding N minutes
+- Subtracting hours and adding minutes
+- The passed hours since the beginning of year
+- Whole hours between two date-time pairs
+- The New Year is coming (or not)
+- Find the latest date-time
+- Don't be late again
+- Is the date between the two other dates?
+- How many date-time pairs match the range
+- The intersection of time ranges
+- Finding max and min elements
+- Composing predicates
+- The chain of responsibility
+- Check if a number is prime
+- Numbers filtering
+- Bad words detecting
+- Omitting long strings
+- Sorting the absolute values
+- Count words without repetitions
+- Maximum of the absolute values
+- Curried function
+- String concatenation
+- Sum of divisors
+- Range quadratic sum
+- Calculating factorials
+- Robot control
+- Counting clicks
+- Palindrome or not
+- The total sum of transaction by each account
+- The product of squares
+- The average salary
+- The sum of odd numbers
+- Using streams many times
+- The ten most frequent words
+- The total sum of canceled transactions
+- The general number of employees
+- Secret codes
+- Prime numbers
+- Inverting streams
+- Accounts
+- An infinite numbers supplier
+- Ternary operator
