@@ -2,6 +2,7 @@ hyperskill_project:
   id: 51
   ide_files: https://stepik.org/media/attachments/lesson/209949/additional_files.json
   is_template_based: false
+  use_ide: true
 stages:
 - id: 277
   step: 5419
@@ -34,7 +35,7 @@ topics:
   - title: Naming variables
     theory_id: 3513
   - title: Scanning the input
-    theory_id: 3603
+    theory_id: 9055
   - title: Arithmetic operations
     theory_id: 3519
   - title: Integer types and operations
@@ -85,30 +86,38 @@ topics:
   2:
   - title: Introduction to OOP
     theory_id: 3614
-  - title: Command line overview
-    theory_id: 8977
+  - title: Computer programming
+    theory_id: 8739
+  - title: What are streams
+    theory_id: 5533
+  - title: Output streams
+    theory_id: 8837
   - title: What is an exception
     theory_id: 3497
   - title: Hierarchy of exceptions
     theory_id: 3570
   - title: Exception handling
     theory_id: 3552
+  - title: Introduction to operating systems
+    theory_id: 9704
+  - title: Command line overview
+    theory_id: 8977
   - title: Files
     theory_id: 3635
   - title: Managing files
     theory_id: 3648
-  - title: What are streams
-    theory_id: 5533
+  - title: Writing files
+    theory_id: 3652
+  - title: Input streams
+    theory_id: 9723
   - title: Floating-point types
     theory_id: 3517
   - title: Math library
     theory_id: 3501
-  - title: Write, compile and run
+  - title: Write, compile, and run
     theory_id: 3739
-  - title: JVM, JRE and JDK
+  - title: JVM, JRE, and JDK
     theory_id: 3499
-  - title: Running programs on your computer
-    theory_id: 3746
   - title: Errors in programs
     theory_id: 3536
   - title: Defining classes
@@ -135,6 +144,8 @@ topics:
     theory_id: 3585
   - title: The Object class
     theory_id: 3596
+  - title: Running programs on your computer
+    theory_id: 3746
   - title: Serialization basics
     theory_id: 8147
   - title: Custom serialization
@@ -146,8 +157,6 @@ topics:
     theory_id: 3636
   - title: File hierarchies
     theory_id: 3638
-  - title: Writing files
-    theory_id: 3652
   - title: Ternary operator
     theory_id: 3506
   5:

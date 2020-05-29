@@ -1,6 +1,6 @@
-import org.hyperskill.hstest.v6.stage.BaseStageTest;
-import org.hyperskill.hstest.v6.testcase.CheckResult;
-import org.hyperskill.hstest.v6.testcase.TestCase;
+import org.hyperskill.hstest.stage.StageTest;
+import org.hyperskill.hstest.testcase.CheckResult;
+import org.hyperskill.hstest.testcase.TestCase;
 import recognition.Main;
 
 import java.util.*;
@@ -14,7 +14,7 @@ class Clue {
     }
 }
 
-public class DigitRecognitionTest extends BaseStageTest<Clue> {
+public class DigitRecognitionTest extends StageTest<Clue> {
     public DigitRecognitionTest() throws Exception {
         super(Main.class);
     }
@@ -244,6 +244,6 @@ public class DigitRecognitionTest extends BaseStageTest<Clue> {
                     "but expected to contain number " + clue.answer);
         }
 
-        return CheckResult.TRUE;
+        return CheckResult.correct();
     }
 }
