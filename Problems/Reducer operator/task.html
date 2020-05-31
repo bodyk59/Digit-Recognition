@@ -1,0 +1,39 @@
+<b>Reducer operator</b> <a class=right href="https://hyperskill.org/learn/step/2435">Open on JetBrains Academy</a>
+<br><br>
+<html>
+ <head></head>
+ <body>
+  <p>Write three operators:</p> 
+  <ol> 
+   <li><strong>A reduce operator</strong> that accepts an initial value (seed) and a combiner function and then returns a new function that combines all values in the given integer range (inclusively) into one integer value (it's a simple form of reduction).</li> 
+   <li>In terms of<strong> the reduce operator </strong>define a <strong>sum operator </strong>for summing integer values in the given range.</li> 
+   <li>In terms of <strong>the reduce operator</strong> define a <strong>product operator</strong> for multiplying integer values in the given range.</li> 
+  </ol> 
+  <p>Try not to use Stream API. Write the reducer yourself.<br> <br> To simplify the problem all functions are declared, <strong>you need to finish their realization</strong>.<br> Look carefully at definition of each operator.<br> <br> During testing all three operators will be tested. <strong>The left boundary &lt;= the right boundary</strong>.<br> <br> <strong>Example 1.</strong> Left boundary = 1, right boundary = 4.</p> 
+  <p>To check <strong>reduceIntOperator</strong> testing system creates and passes an object with type <code class="language-java">IntBinaryOperator</code> and a seed value. <strong>reduceIntOperator</strong> produces an object of <code class="language-java">IntBinaryOperator</code> type, which is used to final <code class="language-java">int</code> result.</p> 
+  <p>Passed <code class="language-java">IntBinaryOperator</code> is sum operator.</p> 
+  <pre><code class="language-java">IntBinaryOperator sum = (x, y) -&gt; x + y;
+IntBinaryOperator resumeWithSumOperator = reduceIntOperator.apply(5, sum);
+resumeWithSumOperator.applyAsInt(1, 4);   // 15 = 5 + (1 + 2 + 3 + 4)</code></pre> 
+  <p>Passed <code class="language-java">IntBinaryOperator</code> is production operator.</p> 
+  <pre><code class="language-java">IntBinaryOperator multiply = (x, y) -&gt; x * y;
+IntBinaryOperator resultWitMultiplyOperator = reduceIntOperator.apply(5, multiply);
+resultWitMultiplyOperator.applyAsInt(1, 4);   // 120 = 5 * (1 * 2 * 3 * 4)</code></pre> 
+  <p><strong>sumOperator</strong> and <strong>productOperator</strong> produces <code class="language-java">int</code> result:</p> 
+  <pre><code class="language-java">sumOperator.applyAsInt(1, 4);     // 10 = 1 + 2 + 3 + 4
+productOperator.applyAsInt(1, 4); // 24 = 1 * 2 * 3 * 4</code></pre> 
+  <p><strong>Example 2.</strong> Left boundary = 5, right boundary = 6.</p> 
+  <p>Passed <code class="language-java">IntBinaryOperator</code> is sum operator.</p> 
+  <pre><code class="language-java">IntBinaryOperator sum = (x, y) -&gt; x + y;
+IntBinaryOperator resumeWithSumOperator = reduceIntOperator.apply(2, sum);
+resumeWithSumOperator.applyAsInt(5, 6);   // 13 = 2 + (5 + 6)</code></pre> 
+  <p>Passed <code class="language-java">IntBinaryOperator</code> is production operator.</p> 
+  <pre><code class="language-java">IntBinaryOperator multiply = (x, y) -&gt; x * y;
+IntBinaryOperator resultWitMultiplyOperator = reduceIntOperator.apply(2, multiply);
+resultWitMultiplyOperator.applyAsInt(5, 6);   // 60 = 2 * (5 * 6)</code></pre> 
+  <p><strong>sumOperator</strong> and <strong>productOperator</strong> produces <code class="language-java">int</code> result:</p> 
+  <pre><code class="language-java">sumOperator.applyAsInt(5, 6);     // 11 = 5 + 6
+productOperator.applyAsInt(5, 6); // 30 = 5 * 6</code></pre>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+<a href="https://hyperskill.org/learn/step/3579">Show topic summary</a>
